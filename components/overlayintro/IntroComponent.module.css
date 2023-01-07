@@ -1,0 +1,86 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    animation: containerAnimation 1.4s linear 0.2s 1 forwards;
+
+}
+
+
+.container>video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    animation: scaleCave 1.4s linear 0.2s 1 forwards;
+
+}
+
+
+.logoContainer {
+    position: absolute;
+    left: 43vw;
+    top: 35vh;
+}
+
+.logoContainer>img {
+    width: 15vw;
+
+
+}
+
+
+@keyframes containerAnimation {
+
+    0% {
+        opacity: 100%;
+    }
+    
+    25% {
+        opacity: 60%;
+    }
+    
+    50% {
+        opacity: 40%;
+    }
+
+    70% {
+        opacity: 20%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+    
+}
+
+
+@keyframes scaleCave {
+    100% {
+        transform: scale(3);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .logoContainer>img {
+        width: 30vh;
+    }
+
+    .logoContainer {
+        left: 24vw;
+    }
+
+  
+}
