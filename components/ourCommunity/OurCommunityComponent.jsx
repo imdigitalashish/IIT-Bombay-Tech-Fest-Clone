@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 
 import styles from "./OurCommunity.module.css";
 
-
 export default function OurCommunityComponent() {
 
 
@@ -15,7 +14,7 @@ export default function OurCommunityComponent() {
             <h2>Our Community, GDSC</h2>
             <p>Google Developer Student Clubs (GDSC) are university-based tech community groups. </p>
 
-
+        
             <div className={styles.carousel}>
 
                 <div className={styles.card}>
@@ -43,7 +42,7 @@ export default function OurCommunityComponent() {
                     <img src="/assets/webdevbootcamp.jpg" alt="" />
                     <p>Tech Enthusiasts</p>
                 </div>
-                
+
 
             </div>
 

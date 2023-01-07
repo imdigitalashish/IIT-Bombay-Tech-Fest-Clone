@@ -48,7 +48,26 @@
 }
 
 
-.landingSection p {
+
+
+.registerInfo {
+    color: rgb(214, 214, 214);
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.aboutEvent {
+    color: white;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+    text-align: center;
+    display: none; 
+    /* TDDO REMOVE THIS */
+}
+
+.landingSection p.scroll {
     color: rgb(211, 211, 211);
 
     padding-top: 50px;

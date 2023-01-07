@@ -1,43 +1,37 @@
 .container {
     color: white;
-    
+
 }
 
-.container > h2 {
+.container>h2 {
     width: fit-content;
     margin: 0 auto;
     font-size: 4rem;
     text-align: center;
-    
+
 }
 
 .container__Section {
     display: flex;
     padding-top: 20px;
+    overflow-x: scroll;
+    justify-content: space-evenly;
+}
 
+.container__Section::-webkit-scrollbar {
+    display: none;
 }
 
 
-@media only screen and (max-width: 600px) {
-    .container__Section {
-        display: block;
-    }
-
+.card>svg {
+    width: auto;
+    min-height: 200px;
 }
 
-.section__Left {
-    flex: 0.5;
-}
 
-.section__Right {
-    flex: 0.5;
-}
-
-.card > img {
-    width: 40%;
-}
 
 .card {
+    min-width: fit-content;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -51,3 +45,115 @@
     transform: scale(1.06);
     background-color: rgba(10, 10, 10, 0.4);
 }
+
+
+@media only screen and (max-width: 600px) {
+    /* .container__Section {
+        display: block;
+    } */
+
+}
+
+
+@property --studentimpact {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+
+@property --attendeeNum {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+
+@property --speakersNum {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+
+
+
+
+
+
+
+
+
+.attendees {
+    animation: attendeeAnimation 5s 1  ease-in-out forwards;
+    counter-reset: num var(--attendeeNum);
+
+}
+
+
+.speakers {
+    animation: speakerAnimation 5s 1  ease-in-out forwards;
+    counter-reset: num var(--speakersNum);
+
+}
+
+
+.studentImpact {
+    animation: animateStudentImpact 5s 1  ease-in-out forwards;
+    counter-reset: num var(--studentimpact);
+
+}
+
+
+@keyframes attendeeAnimation {
+
+    0% {
+        --attendeeNum: 0;
+    }
+    100% {
+        --attendeeNum: 700;
+    }
+    
+}
+
+
+@keyframes speakerAnimation {
+
+    0% {
+        --speakersNum: 0;
+    }
+    100% {
+        --speakersNum: 7;
+    }
+    
+}
+
+
+
+@keyframes animateStudentImpact {
+
+    0% {
+        --studentimpact: 0;
+    }
+    100% {
+        --studentimpact: 9000;
+    }
+    
+
+}
+
+
+.attendees::after {
+    content: counter(num) "+ Attendees";
+
+}
+
+
+.speakers::after {
+    content: counter(num) "+ Speakers";
+}
+
+.studentImpact::after {
+    content: counter(num) "+ Student Impact";
+}
+
