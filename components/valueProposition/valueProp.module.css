@@ -1,0 +1,53 @@
+.container {
+    color: white;
+    
+}
+
+.container > h2 {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 4rem;
+    text-align: center;
+    
+}
+
+.container__Section {
+    display: flex;
+    padding-top: 20px;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container__Section {
+        display: block;
+    }
+
+}
+
+.section__Left {
+    flex: 0.5;
+}
+
+.section__Right {
+    flex: 0.5;
+}
+
+.card > img {
+    width: 40%;
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.7rem;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    background-color: rgba(10, 10, 10, 0.4);
+}

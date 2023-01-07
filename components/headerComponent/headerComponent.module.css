@@ -1,0 +1,84 @@
+.headerImage {
+    width: 300px;
+}
+
+.container>nav {
+    padding-top: 1.8rem;
+}
+
+.landingSection {
+    height: 90vh;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+}
+
+
+.tagLine {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+.tagLine>img {
+    width: 50%;
+}
+
+
+.registerNow {
+    color: white;
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+}
+
+
+.registerNow>button {
+    background: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+    border: 2px solid white;
+    padding: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.landingSection p {
+    color: rgb(211, 211, 211);
+
+    padding-top: 50px;
+    font-weight: 500;
+    font-family: "Roboto";
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-size: 32px;
+    animation: scrollDownAnimation 2s ease-in-out 0s infinite forwards;
+}
+
+
+@keyframes scrollDownAnimation {
+    0% {
+        opacity: 30%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .tagLine>img {
+        width: 70%;
+    }
+
+}

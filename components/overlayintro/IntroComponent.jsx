@@ -10,24 +10,16 @@ export default function IntroComponent() {
 
 
 
-    useEffect(() => {
-        setTimeout(() => {
-
-            containerRef.current.remove();
-        }, 1600) ;
-
-
-    }, [])
 
 
 
-    const containerRef = useRef(null);
+
 
 
 
 
     return (
-        <div ref={containerRef} className={styles.container}>
+        <div className={styles.container}>
             <video muted autoPlay loop>
                 <source src="/assets/portal_video.webm" type="video/webm" />
             </video>

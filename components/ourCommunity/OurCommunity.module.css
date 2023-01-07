@@ -1,0 +1,49 @@
+.container {
+    color: white;
+    padding-top: 4rem;
+}
+
+
+
+.container>h2 {
+
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+.container > p {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel { 
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    height: 60vh;
+    min-width: 500px;
+    width: 500px;
+    text-align: center;
+}
+
+.card >img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card > p {
+    padding-top: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+}
