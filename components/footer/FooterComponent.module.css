@@ -1,0 +1,35 @@
+.container {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.container > .overLay {
+    width: 100vw;
+    height: 109%;
+    opacity: 70%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: black;
+}
+
+.container img {
+    width: 50%;
+    transform: translateX(20px);
+}
+
+.container p {
+    color: white;
+    margin: 0 auto;
+    width: fit-content;
+    z-index: 23;
+    font-size: 30px;
+    padding-top: 20px;
+
+    text-align: center;
+}

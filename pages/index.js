@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import FooterComponent from '../components/footer/FooterComponent';
 import HeaderComponent from '../components/headerComponent/headerComponent';
 import OurCommunityComponent from '../components/ourCommunity/OurCommunityComponent';
 import IntroComponent from '../components/overlayintro/IntroComponent';
@@ -43,6 +44,7 @@ export default function MainScreen() {
       <HeaderComponent />
       <ValuePropComponent />
       <OurCommunityComponent />
+      <FooterComponent />
     </div>
   )
 

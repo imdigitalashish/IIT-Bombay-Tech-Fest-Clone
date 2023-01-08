@@ -1,12 +1,13 @@
 .container {
     color: white;
+    font-size: 16px;
 
 }
 
 .container>h2 {
     width: fit-content;
     margin: 0 auto;
-    font-size: 4rem;
+    font-size: 4em;
     text-align: center;
 
 }
@@ -23,6 +24,8 @@
 }
 
 
+
+
 .card>svg {
     width: auto;
     min-height: 200px;
@@ -31,6 +34,9 @@
 
 
 .card {
+    opacity: 30%;
+        
+    transform: translateX(20px) translateY(20px) scale(0.8);
     min-width: fit-content;
     align-items: center;
     justify-content: center;
@@ -38,19 +44,73 @@
     font-size: 2rem;
     font-weight: bold;
     padding: 1.7rem;
-    transition: all 0.3s;
 }
 
+
+.cardAnimation {
+    animation: cardAnimation 0.5s linear 1 forwards;
+
+}
+
+.cardAnimation:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.cardAnimation:nth-child(2) {
+    animation-delay: 0.6s;
+
+}
+
+
+.cardAnimation:nth-child(3) {
+    animation-delay: 0.9s;
+
+}
+
+
+.cardAnimation:nth-child(4) {
+
+    animation-delay: 1.2s;
+
+}
+
+
+
+@keyframes cardAnimation {
+    0% {
+        opacity: 30%;
+        transform:  scale(0.9);
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+
+
+/* 
 .card:hover {
     transform: scale(1.06);
     background-color: rgba(10, 10, 10, 0.4);
-}
+} */
 
 
 @media only screen and (max-width: 600px) {
     /* .container__Section {
         display: block;
     } */
+    .container {
+        font-size: 12px;
+    }
+
+    .container__Section {
+        justify-content: start;
+    }
+
+    .container__Section  > div:nth-child(1){
+        padding-left: 20vw;
+    }
 
 }
 
@@ -85,35 +145,48 @@
 
 
 .attendees {
-    animation: attendeeAnimation 5s 1  ease-in-out forwards;
+
+    animation: attendeeAnimation 5s 1 ease-in-out forwards;
     counter-reset: num var(--attendeeNum);
 
 }
 
 
 .speakers {
-    animation: speakerAnimation 5s 1  ease-in-out forwards;
+    animation: speakerAnimation 5s 1 ease-in-out forwards;
     counter-reset: num var(--speakersNum);
 
 }
 
 
 .studentImpact {
-    animation: animateStudentImpact 5s 1  ease-in-out forwards;
+    animation: animateStudentImpact 5s 1 ease-in-out forwards;
     counter-reset: num var(--studentimpact);
 
 }
 
 
+
+
+
+
+
+
+
+
+
 @keyframes attendeeAnimation {
 
     0% {
+
         --attendeeNum: 0;
     }
+
     100% {
+
         --attendeeNum: 700;
     }
-    
+
 }
 
 
@@ -122,10 +195,11 @@
     0% {
         --speakersNum: 0;
     }
+
     100% {
         --speakersNum: 7;
     }
-    
+
 }
 
 
@@ -135,10 +209,11 @@
     0% {
         --studentimpact: 0;
     }
+
     100% {
         --studentimpact: 9000;
     }
-    
+
 
 }
 
@@ -156,4 +231,3 @@
 .studentImpact::after {
     content: counter(num) "+ Student Impact";
 }
-
