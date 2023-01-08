@@ -3,7 +3,7 @@
     width: 100vw;
     overflow: hidden;
     position: relative;
-    animation: containerAnimation 1.4s linear 0.2s 1 forwards;
+    animation: containerAnimation 1.4s linear 0.6s 1 forwards;
 
 }
 
@@ -24,7 +24,7 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    animation: scaleCave 1.4s linear 0.2s 1 forwards;
+    animation: scaleCave 1.4s linear 0.6s 1 forwards;
 
 }
 
